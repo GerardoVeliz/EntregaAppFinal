@@ -18,6 +18,7 @@ namespace Presentacion
         public frmCatalogoMain()
         {
             InitializeComponent();
+            
         }
 
         private void cargar()
@@ -65,6 +66,7 @@ namespace Presentacion
             {
 
             cargar();
+            
             }
             catch (Exception ex)
             {
@@ -104,7 +106,8 @@ namespace Presentacion
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             frmAgregar frmAgregarAuto = new frmAgregar();
-            frmAgregarAuto.ShowDialog(); 
+            frmAgregarAuto.ShowDialog();
+            cargar();
         }
     }
 }

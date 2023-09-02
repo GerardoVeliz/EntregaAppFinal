@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dominio;
 using Negocio;
+using Presentacion;
 
 namespace Presentacion
 {
@@ -19,7 +20,7 @@ namespace Presentacion
         public frmAgregar()
         {
             InitializeComponent();
-            
+          
         }
 
         private void cargarImagen(string imagen)
@@ -39,8 +40,11 @@ namespace Presentacion
 
         }
 
-        private void btnAceptar_Click(object sender, EventArgs e)
+
+
+        private void btnAceptar_Click_1(object sender, EventArgs e)
         {
+
             autoNegocio autoNegocio = new autoNegocio();
             try
             {
@@ -51,9 +55,12 @@ namespace Presentacion
                 auto.precio = decimal.Parse(txtbPrecio.Text);
                 auto.codigo = txtbCodigo.Text;
                 auto.descripcion = txtbDescripcion.Text;
+                auto.urlImagen = txtbUrl.Text;
                 autoNegocio.agregarAuto(auto);
                 MessageBox.Show("Agregado Correctamente!");
-                
+
+
+                this.Close();
 
                 
             }
@@ -86,5 +93,12 @@ namespace Presentacion
                 throw ex;
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+       
     }
 }

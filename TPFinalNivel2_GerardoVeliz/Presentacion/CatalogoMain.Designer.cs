@@ -97,7 +97,7 @@ namespace Presentacion
             this.pboxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pboxImagen.Location = new System.Drawing.Point(820, 117);
             this.pboxImagen.Name = "pboxImagen";
-            this.pboxImagen.Size = new System.Drawing.Size(350, 414);
+            this.pboxImagen.Size = new System.Drawing.Size(377, 337);
             this.pboxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxImagen.TabIndex = 3;
             this.pboxImagen.TabStop = false;
