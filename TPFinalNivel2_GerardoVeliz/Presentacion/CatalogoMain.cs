@@ -27,6 +27,7 @@ namespace Presentacion
             {
                 listaAuto = autoNegocios.listarAutos();
                 dgvCatalogo.DataSource = listaAuto;
+                dgvCatalogo.Columns["UrlImagen"].Visible = false;
                 
 
 
@@ -36,6 +37,23 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString()); 
             }
+
+        }
+
+        private void cargarImagen(string imagen)
+
+        {
+            try
+            {
+            pboxImagen.Load(imagen);
+
+            }
+            catch (Exception)
+            {
+
+                pboxImagen.Load("https://th.bing.com/th/id/OIP.CnjIih4IXLpoe5vD54ybJQHaHa?pid=ImgDet&rs=1");
+            }
+
 
         }
       
@@ -65,6 +83,21 @@ namespace Presentacion
         private void pboxImagen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dgvCatalogo_SelectionChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Auto aux = new Auto();
+                aux = (Auto)dgvCatalogo.CurrentRow.DataBoundItem;
+                cargarImagen(aux.urlImagen);
+            }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

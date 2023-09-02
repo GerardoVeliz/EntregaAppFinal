@@ -63,10 +63,12 @@ namespace Presentacion
             // dgvCatalogo
             // 
             this.dgvCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCatalogo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvCatalogo.Location = new System.Drawing.Point(15, 117);
             this.dgvCatalogo.Name = "dgvCatalogo";
             this.dgvCatalogo.Size = new System.Drawing.Size(732, 231);
             this.dgvCatalogo.TabIndex = 0;
+            this.dgvCatalogo.SelectionChanged += new System.EventHandler(this.dgvCatalogo_SelectionChanged);
             // 
             // lblBienvenidaCatalogo
             // 
@@ -89,9 +91,11 @@ namespace Presentacion
             // 
             // pboxImagen
             // 
+            this.pboxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pboxImagen.Location = new System.Drawing.Point(820, 117);
             this.pboxImagen.Name = "pboxImagen";
-            this.pboxImagen.Size = new System.Drawing.Size(350, 257);
+            this.pboxImagen.Size = new System.Drawing.Size(350, 414);
+            this.pboxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxImagen.TabIndex = 3;
             this.pboxImagen.TabStop = false;
             this.pboxImagen.Click += new System.EventHandler(this.pboxImagen_Click);
@@ -101,7 +105,7 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(786, 101);
+            this.label2.Location = new System.Drawing.Point(817, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 4;
