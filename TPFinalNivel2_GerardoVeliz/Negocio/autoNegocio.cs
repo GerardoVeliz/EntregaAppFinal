@@ -10,6 +10,29 @@ namespace Negocio
 {
      public class autoNegocio
     {
+
+        public void agregarAuto(Auto nuevo)
+        {
+            accesoDatos datos = new accesoDatos();
+            try
+            {
+                //datos.SetearQuery("insert into POKEMONS(Numero, Nombre, Descripcion, Activo, idTipo, idDebilidad,UrlImagen) values("+nuevo.IdPokemon+", '"+nuevo.nombre+"', '"+nuevo.descripcion+ "', 1, @idTipo, @idDebilidad,@UrlImagen)");
+                datos.SetearQuery("insert into ARTICULOS (Codigo,Nombre,Descripcion,IdMarca,IdCategoria,Precio,ImagenUrl) values ('"+nuevo.codigo+"','"+nuevo.nombre+"','"+nuevo.descripcion+"',@IdMarca,@IdCategoria,"+nuevo.precio+",'"+nuevo.urlImagen+"')");
+                datos.setearParametros("@IdMarca", nuevo.marca.id);
+                datos.setearParametros("@IdCategoria", nuevo.categoria.id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
         public List <Auto> listarAutos()
         {
             List<Auto> autos = new List<Auto>();
@@ -26,8 +49,7 @@ namespace Negocio
                     aux.nombre= (string)datos.lector["Nombre"];
                     aux.descripcion= (string)datos.lector["Descripcion"];
                     aux.precio = (decimal)datos.lector["Precio"];
-                    //if (!(datos.lector["UrlImagen"] is DBNull))
-                    
+                    if (!(datos.lector["UrlImagen"] is DBNull))
                     aux.urlImagen= (string)datos.lector["UrlImagen"];
                     aux.marca = new Marca();
                     aux.marca.id = (int)datos.lector["IdMarca"];
@@ -50,6 +72,8 @@ namespace Negocio
             {
                 datos.CerrarConexion();
             }
+
+            
         }
     }
 }

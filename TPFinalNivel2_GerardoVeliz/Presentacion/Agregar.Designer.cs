@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Agregar
+    partial class frmAgregar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,199 +29,223 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAceptar = new System.Windows.Forms.Button();
+            this.cboxMarca = new System.Windows.Forms.ComboBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.pboxUrl = new System.Windows.Forms.PictureBox();
+            this.txtbCodigo = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.lblMarca = new System.Windows.Forms.Label();
+            this.lblModelo = new System.Windows.Forms.Label();
+            this.cboxModelo = new System.Windows.Forms.ComboBox();
+            this.txtbDescripcion = new System.Windows.Forms.TextBox();
+            this.txtbNombre = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblTituloFoto = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.lblUrl = new System.Windows.Forms.Label();
+            this.txtbUrl = new System.Windows.Forms.TextBox();
+            this.txtbPrecio = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxUrl)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnAceptar
             // 
-            this.button1.Location = new System.Drawing.Point(40, 394);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAceptar.Location = new System.Drawing.Point(40, 394);
+            this.btnAceptar.Name = "btnAceptar";
+            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.Text = "Aceptar";
+            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // comboBox1
+            // cboxMarca
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(107, 222);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboxMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxMarca.FormattingEnabled = true;
+            this.cboxMarca.Location = new System.Drawing.Point(107, 198);
+            this.cboxMarca.Name = "cboxMarca";
+            this.cboxMarca.Size = new System.Drawing.Size(121, 21);
+            this.cboxMarca.TabIndex = 1;
             // 
-            // label1
+            // lblCodigo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 96);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(37, 100);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(40, 13);
+            this.lblCodigo.TabIndex = 2;
+            this.lblCodigo.Text = "Codigo";
             // 
-            // pictureBox1
+            // pboxUrl
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(291, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(330, 392);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pboxUrl.Location = new System.Drawing.Point(291, 44);
+            this.pboxUrl.Name = "pboxUrl";
+            this.pboxUrl.Size = new System.Drawing.Size(321, 318);
+            this.pboxUrl.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxUrl.TabIndex = 3;
+            this.pboxUrl.TabStop = false;
             // 
-            // radioButton1
+            // txtbCodigo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(55, 320);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 17);
-            this.radioButton1.TabIndex = 4;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.txtbCodigo.Location = new System.Drawing.Point(107, 93);
+            this.txtbCodigo.Name = "txtbCodigo";
+            this.txtbCodigo.Size = new System.Drawing.Size(100, 20);
+            this.txtbCodigo.TabIndex = 5;
             // 
-            // textBox1
+            // lblNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(107, 93);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(37, 135);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.TabIndex = 6;
+            this.lblNombre.Text = "Nombre";
             // 
-            // label2
+            // lblDescripcion
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(37, 139);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Location = new System.Drawing.Point(37, 170);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
+            this.lblDescripcion.TabIndex = 7;
+            this.lblDescripcion.Text = "Descripcion";
             // 
-            // label3
+            // lblMarca
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(37, 182);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "label3";
+            this.lblMarca.AutoSize = true;
+            this.lblMarca.Location = new System.Drawing.Point(37, 206);
+            this.lblMarca.Name = "lblMarca";
+            this.lblMarca.Size = new System.Drawing.Size(37, 13);
+            this.lblMarca.TabIndex = 8;
+            this.lblMarca.Text = "Marca";
             // 
-            // label4
+            // lblModelo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(37, 225);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "label4";
+            this.lblModelo.AutoSize = true;
+            this.lblModelo.Location = new System.Drawing.Point(37, 242);
+            this.lblModelo.Name = "lblModelo";
+            this.lblModelo.Size = new System.Drawing.Size(42, 13);
+            this.lblModelo.TabIndex = 9;
+            this.lblModelo.Text = "Modelo";
             // 
-            // label5
+            // cboxModelo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(37, 268);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
+            this.cboxModelo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxModelo.FormattingEnabled = true;
+            this.cboxModelo.Location = new System.Drawing.Point(107, 234);
+            this.cboxModelo.Name = "cboxModelo";
+            this.cboxModelo.Size = new System.Drawing.Size(121, 21);
+            this.cboxModelo.TabIndex = 10;
             // 
-            // comboBox2
+            // txtbDescripcion
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(107, 265);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 10;
+            this.txtbDescripcion.Location = new System.Drawing.Point(107, 163);
+            this.txtbDescripcion.Name = "txtbDescripcion";
+            this.txtbDescripcion.Size = new System.Drawing.Size(100, 20);
+            this.txtbDescripcion.TabIndex = 11;
             // 
-            // textBox2
+            // txtbNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 175);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 11;
+            this.txtbNombre.Location = new System.Drawing.Point(107, 128);
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtbNombre.TabIndex = 12;
             // 
-            // textBox3
+            // lblTitulo
             // 
-            this.textBox3.Location = new System.Drawing.Point(107, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 12;
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblTitulo.Location = new System.Drawing.Point(91, 44);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(82, 13);
+            this.lblTitulo.TabIndex = 13;
+            this.lblTitulo.Text = "Nuevo Auto: ";
             // 
-            // label6
+            // lblTituloFoto
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(37, 21);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "label6";
+            this.lblTituloFoto.AutoSize = true;
+            this.lblTituloFoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTituloFoto.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblTituloFoto.Location = new System.Drawing.Point(301, 28);
+            this.lblTituloFoto.Name = "lblTituloFoto";
+            this.lblTituloFoto.Size = new System.Drawing.Size(52, 13);
+            this.lblTituloFoto.TabIndex = 14;
+            this.lblTituloFoto.Text = "Imagen:";
             // 
-            // label7
+            // btnCancelar
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(301, 28);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 14;
-            this.label7.Text = "label7";
+            this.btnCancelar.Location = new System.Drawing.Point(132, 394);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // lblPrecio
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(146, 320);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(85, 17);
-            this.radioButton2.TabIndex = 15;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(37, 326);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.TabIndex = 17;
+            this.lblPrecio.Text = "Precio";
             // 
-            // button2
+            // lblUrl
             // 
-            this.button2.Location = new System.Drawing.Point(132, 394);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.lblUrl.AutoSize = true;
+            this.lblUrl.Location = new System.Drawing.Point(37, 291);
+            this.lblUrl.Name = "lblUrl";
+            this.lblUrl.Size = new System.Drawing.Size(58, 13);
+            this.lblUrl.TabIndex = 18;
+            this.lblUrl.Text = "Url Imagen";
             // 
-            // Agregar
+            // txtbUrl
+            // 
+            this.txtbUrl.Location = new System.Drawing.Point(107, 284);
+            this.txtbUrl.Name = "txtbUrl";
+            this.txtbUrl.Size = new System.Drawing.Size(100, 20);
+            this.txtbUrl.TabIndex = 19;
+            this.txtbUrl.TextChanged += new System.EventHandler(this.txtbUrl_TextChanged);
+            // 
+            // txtbPrecio
+            // 
+            this.txtbPrecio.Location = new System.Drawing.Point(107, 319);
+            this.txtbPrecio.Name = "txtbPrecio";
+            this.txtbPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtbPrecio.TabIndex = 20;
+            // 
+            // frmAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(661, 525);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button1);
-            this.Name = "Agregar";
-            this.Text = "Agregar";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ClientSize = new System.Drawing.Size(650, 462);
+            this.Controls.Add(this.txtbPrecio);
+            this.Controls.Add(this.txtbUrl);
+            this.Controls.Add(this.lblUrl);
+            this.Controls.Add(this.lblPrecio);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.lblTituloFoto);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.txtbNombre);
+            this.Controls.Add(this.txtbDescripcion);
+            this.Controls.Add(this.cboxModelo);
+            this.Controls.Add(this.lblModelo);
+            this.Controls.Add(this.lblMarca);
+            this.Controls.Add(this.lblDescripcion);
+            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.txtbCodigo);
+            this.Controls.Add(this.pboxUrl);
+            this.Controls.Add(this.lblCodigo);
+            this.Controls.Add(this.cboxMarca);
+            this.Controls.Add(this.btnAceptar);
+            this.Name = "frmAgregar";
+            this.Text = "Agregar Nuevo";
+            this.Load += new System.EventHandler(this.frmAgregar_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxUrl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -229,22 +253,24 @@ namespace Presentacion
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ComboBox cboxMarca;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.PictureBox pboxUrl;
+        private System.Windows.Forms.TextBox txtbCodigo;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.Label lblMarca;
+        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.ComboBox cboxModelo;
+        private System.Windows.Forms.TextBox txtbDescripcion;
+        private System.Windows.Forms.TextBox txtbNombre;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblTituloFoto;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.Label lblUrl;
+        private System.Windows.Forms.TextBox txtbUrl;
+        private System.Windows.Forms.TextBox txtbPrecio;
     }
 }

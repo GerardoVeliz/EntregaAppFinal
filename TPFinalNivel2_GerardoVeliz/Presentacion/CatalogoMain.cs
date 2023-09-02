@@ -28,6 +28,7 @@ namespace Presentacion
                 listaAuto = autoNegocios.listarAutos();
                 dgvCatalogo.DataSource = listaAuto;
                 dgvCatalogo.Columns["UrlImagen"].Visible = false;
+                dgvCatalogo.Columns["Id"].Visible = false; 
                 
 
 
@@ -98,6 +99,12 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            frmAgregar frmAgregarAuto = new frmAgregar();
+            frmAgregarAuto.ShowDialog(); 
         }
     }
 }
