@@ -10,6 +10,26 @@ namespace Negocio
 {
      public class autoNegocio
     {
+        public void bajaFisica( int id)
+        {
+            accesoDatos datos = new accesoDatos(); 
+            
+            try
+            {
+                datos.SetearQuery("delete from ARTICULOS where Id = @id");
+                datos.setearParametros("@id", id);
+                datos.ejecutarAccion(); 
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
 
         public void agregarAuto(Auto nuevo)
         {

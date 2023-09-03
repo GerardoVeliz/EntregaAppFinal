@@ -43,7 +43,6 @@ namespace Presentacion
             this.lblTextoBienvenida.Size = new System.Drawing.Size(324, 25);
             this.lblTextoBienvenida.TabIndex = 0;
             this.lblTextoBienvenida.Text = "Bienvenido a mi entraga final!";
-         
             // 
             // lblTextobievenida2
             // 
@@ -81,6 +80,7 @@ namespace Presentacion
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Margin = new System.Windows.Forms.Padding(7, 6, 7, 6);
             this.Name = "FrmPantallaBienvenida";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bienvenido al Catalogo!";
             this.Load += new System.EventHandler(this.FrmPantallaBienvenida_Load);
             this.ResumeLayout(false);

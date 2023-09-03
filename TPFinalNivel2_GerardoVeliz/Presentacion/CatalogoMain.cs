@@ -126,5 +126,45 @@ namespace Presentacion
             cargar();
 
         }
+
+        private void btnBajaFisica_Click(object sender, EventArgs e)
+        {
+            autoNegocio negocioAuto = new autoNegocio();
+            Auto seleccionado = new Auto();
+
+            try
+            {
+                
+                DialogResult respuesta= MessageBox.Show("Esta seguro que quiere elimnar este registro?", "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
+                {
+                seleccionado = (Auto)dgvCatalogo.CurrentRow.DataBoundItem;
+                negocioAuto.bajaFisica(seleccionado.Id);
+                MessageBox.Show("Eliminado con exito!"); 
+                cargar();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString()); 
+            }
+        }
+
+        private void panel1_DockChanged(object sender, EventArgs e)
+        {
+            if (panelLateral.Width == 0)
+            {
+                // Mostrar el panel lateral
+                panelLateral.Width = 200; // Define el ancho que desees
+            }
+            else
+            {
+                // Ocultar el panel lateral
+                panelLateral.Width = 0;
+            }
+        }
     }
 }
