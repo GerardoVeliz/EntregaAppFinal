@@ -20,6 +20,11 @@ namespace Presentacion
             InitializeComponent();
             
         }
+        private void ocultarColumnas()
+        {
+            dgvCatalogo.Columns["UrlImagen"].Visible = false;
+            dgvCatalogo.Columns["Id"].Visible = false;
+        }
 
         private void cargar()
         {
@@ -28,8 +33,8 @@ namespace Presentacion
             {
                 listaAuto = autoNegocios.listarAutos();
                 dgvCatalogo.DataSource = listaAuto;
-                dgvCatalogo.Columns["UrlImagen"].Visible = false;
-                dgvCatalogo.Columns["Id"].Visible = false; 
+                ocultarColumnas();
+               
                 
 
 
@@ -90,17 +95,12 @@ namespace Presentacion
 
         private void dgvCatalogo_SelectionChanged(object sender, EventArgs e)
         {
-            try
+                if (dgvCatalogo.CurrentRow != null)
             {
-                Auto aux = new Auto();
-                aux = (Auto)dgvCatalogo.CurrentRow.DataBoundItem;
+                Auto aux = (Auto)dgvCatalogo.CurrentRow.DataBoundItem;
                 cargarImagen(aux.urlImagen);
             }
-            catch (Exception ex )
-            {
-
-                MessageBox.Show(ex.ToString());
-            }
+          
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -164,6 +164,39 @@ namespace Presentacion
             {
                 // Ocultar el panel lateral
                 panelLateral.Width = 0;
+            }
+        }
+
+        private void panelLateral_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtbFiltroRapido_TextChanged(object sender, EventArgs e)
+        {
+            string filtro;
+            List<Auto> listaFiltrada = new List<Auto>();
+                filtro = txtbFiltroRapido.Text;
+            try
+            {
+                if (filtro != "")
+                {
+                listaFiltrada = listaAuto.FindAll(x => x.codigo.ToUpper().Contains(filtro.ToUpper()) ||x.nombre.ToUpper().Contains(filtro.ToUpper())||x.descripcion.ToUpper().Contains(filtro.ToUpper()) || x.categoria.descripcion.ToUpper().Contains(filtro.ToUpper()) );
+
+                }
+                else
+                {
+                    listaFiltrada = listaAuto; 
+                }
+                dgvCatalogo.DataSource = null;
+                dgvCatalogo.DataSource = listaFiltrada;
+                ocultarColumnas(); 
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString()); 
             }
         }
     }

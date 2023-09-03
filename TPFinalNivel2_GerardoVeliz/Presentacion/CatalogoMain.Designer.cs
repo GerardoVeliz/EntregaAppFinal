@@ -56,13 +56,10 @@ namespace Presentacion
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblArticulo = new System.Windows.Forms.Label();
             this.panelLateral = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.panelLateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvCatalogo
@@ -217,7 +214,7 @@ namespace Presentacion
             this.lblFiltroEspecifico.AutoSize = true;
             this.lblFiltroEspecifico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltroEspecifico.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblFiltroEspecifico.Location = new System.Drawing.Point(196, 614);
+            this.lblFiltroEspecifico.Location = new System.Drawing.Point(163, 580);
             this.lblFiltroEspecifico.Name = "lblFiltroEspecifico";
             this.lblFiltroEspecifico.Size = new System.Drawing.Size(98, 13);
             this.lblFiltroEspecifico.TabIndex = 15;
@@ -229,10 +226,11 @@ namespace Presentacion
             this.txtbFiltroRapido.Name = "txtbFiltroRapido";
             this.txtbFiltroRapido.Size = new System.Drawing.Size(434, 20);
             this.txtbFiltroRapido.TabIndex = 16;
+            this.txtbFiltroRapido.TextChanged += new System.EventHandler(this.txtbFiltroRapido_TextChanged);
             // 
             // txtboxCriterio
             // 
-            this.txtboxCriterio.Location = new System.Drawing.Point(616, 646);
+            this.txtboxCriterio.Location = new System.Drawing.Point(583, 612);
             this.txtboxCriterio.Name = "txtboxCriterio";
             this.txtboxCriterio.Size = new System.Drawing.Size(100, 20);
             this.txtboxCriterio.TabIndex = 17;
@@ -240,7 +238,7 @@ namespace Presentacion
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(186, 649);
+            this.lblCampo.Location = new System.Drawing.Point(153, 615);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(40, 13);
             this.lblCampo.TabIndex = 18;
@@ -249,7 +247,7 @@ namespace Presentacion
             // lblCriterio1
             // 
             this.lblCriterio1.AutoSize = true;
-            this.lblCriterio1.Location = new System.Drawing.Point(359, 649);
+            this.lblCriterio1.Location = new System.Drawing.Point(326, 615);
             this.lblCriterio1.Name = "lblCriterio1";
             this.lblCriterio1.Size = new System.Drawing.Size(39, 13);
             this.lblCriterio1.TabIndex = 19;
@@ -258,7 +256,7 @@ namespace Presentacion
             // lblCriterio2
             // 
             this.lblCriterio2.AutoSize = true;
-            this.lblCriterio2.Location = new System.Drawing.Point(559, 649);
+            this.lblCriterio2.Location = new System.Drawing.Point(526, 615);
             this.lblCriterio2.Name = "lblCriterio2";
             this.lblCriterio2.Size = new System.Drawing.Size(26, 13);
             this.lblCriterio2.TabIndex = 20;
@@ -267,7 +265,7 @@ namespace Presentacion
             // cboxCampo
             // 
             this.cboxCampo.FormattingEnabled = true;
-            this.cboxCampo.Location = new System.Drawing.Point(232, 645);
+            this.cboxCampo.Location = new System.Drawing.Point(199, 611);
             this.cboxCampo.Name = "cboxCampo";
             this.cboxCampo.Size = new System.Drawing.Size(121, 21);
             this.cboxCampo.TabIndex = 21;
@@ -275,14 +273,14 @@ namespace Presentacion
             // cboxCriterio1
             // 
             this.cboxCriterio1.FormattingEnabled = true;
-            this.cboxCriterio1.Location = new System.Drawing.Point(406, 645);
+            this.cboxCriterio1.Location = new System.Drawing.Point(373, 611);
             this.cboxCriterio1.Name = "cboxCriterio1";
             this.cboxCriterio1.Size = new System.Drawing.Size(121, 21);
             this.cboxCriterio1.TabIndex = 22;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(736, 644);
+            this.btnBuscar.Location = new System.Drawing.Point(703, 610);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
             this.btnBuscar.TabIndex = 23;
@@ -302,8 +300,7 @@ namespace Presentacion
             // 
             // panelLateral
             // 
-            this.panelLateral.Controls.Add(this.label1);
-            this.panelLateral.Controls.Add(this.pictureBox1);
+            this.panelLateral.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.panelLateral.Controls.Add(this.btnAgregar);
             this.panelLateral.Controls.Add(this.btnModificar);
             this.panelLateral.Controls.Add(this.btnBajaFisica);
@@ -312,23 +309,7 @@ namespace Presentacion
             this.panelLateral.Size = new System.Drawing.Size(140, 738);
             this.panelLateral.TabIndex = 25;
             this.panelLateral.DockChanged += new System.EventHandler(this.panel1_DockChanged);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(4, 382);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(133, 353);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "label1";
+            this.panelLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLateral_Paint);
             // 
             // frmCatalogoMain
             // 
@@ -364,8 +345,6 @@ namespace Presentacion
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panelLateral.ResumeLayout(false);
-            this.panelLateral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -399,7 +378,5 @@ namespace Presentacion
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton2;
         private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.Panel panelLateral;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
