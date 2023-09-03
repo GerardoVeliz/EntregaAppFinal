@@ -119,8 +119,10 @@ namespace Presentacion
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            frmAgregar frmAgregarAuto = new frmAgregar();
-            frmAgregarAuto.ShowDialog();
+            Auto selecionado = new Auto();
+            selecionado = (Auto)dgvCatalogo.CurrentRow.DataBoundItem;
+            frmAgregar frmModificarAuto = new frmAgregar(selecionado);
+            frmModificarAuto.ShowDialog();
             cargar();
 
         }

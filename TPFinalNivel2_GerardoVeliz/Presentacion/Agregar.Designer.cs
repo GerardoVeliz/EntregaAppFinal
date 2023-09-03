@@ -56,7 +56,7 @@ namespace Presentacion
             this.btnAceptar.Location = new System.Drawing.Point(40, 394);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click_1);
@@ -68,7 +68,7 @@ namespace Presentacion
             this.cboxMarca.Location = new System.Drawing.Point(107, 198);
             this.cboxMarca.Name = "cboxMarca";
             this.cboxMarca.Size = new System.Drawing.Size(121, 21);
-            this.cboxMarca.TabIndex = 1;
+            this.cboxMarca.TabIndex = 3;
             // 
             // lblCodigo
             // 
@@ -93,7 +93,7 @@ namespace Presentacion
             this.txtbCodigo.Location = new System.Drawing.Point(107, 93);
             this.txtbCodigo.Name = "txtbCodigo";
             this.txtbCodigo.Size = new System.Drawing.Size(100, 20);
-            this.txtbCodigo.TabIndex = 5;
+            this.txtbCodigo.TabIndex = 0;
             // 
             // lblNombre
             // 
@@ -138,21 +138,21 @@ namespace Presentacion
             this.cboxModelo.Location = new System.Drawing.Point(107, 234);
             this.cboxModelo.Name = "cboxModelo";
             this.cboxModelo.Size = new System.Drawing.Size(121, 21);
-            this.cboxModelo.TabIndex = 10;
+            this.cboxModelo.TabIndex = 4;
             // 
             // txtbDescripcion
             // 
             this.txtbDescripcion.Location = new System.Drawing.Point(107, 163);
             this.txtbDescripcion.Name = "txtbDescripcion";
             this.txtbDescripcion.Size = new System.Drawing.Size(100, 20);
-            this.txtbDescripcion.TabIndex = 11;
+            this.txtbDescripcion.TabIndex = 2;
             // 
             // txtbNombre
             // 
             this.txtbNombre.Location = new System.Drawing.Point(107, 128);
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Size = new System.Drawing.Size(100, 20);
-            this.txtbNombre.TabIndex = 12;
+            this.txtbNombre.TabIndex = 1;
             // 
             // lblTitulo
             // 
@@ -181,7 +181,7 @@ namespace Presentacion
             this.btnCancelar.Location = new System.Drawing.Point(132, 394);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 16;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -209,7 +209,7 @@ namespace Presentacion
             this.txtbUrl.Location = new System.Drawing.Point(107, 284);
             this.txtbUrl.Name = "txtbUrl";
             this.txtbUrl.Size = new System.Drawing.Size(100, 20);
-            this.txtbUrl.TabIndex = 19;
+            this.txtbUrl.TabIndex = 5;
             this.txtbUrl.TextChanged += new System.EventHandler(this.txtbUrl_TextChanged);
             // 
             // txtbPrecio
@@ -217,7 +217,7 @@ namespace Presentacion
             this.txtbPrecio.Location = new System.Drawing.Point(107, 319);
             this.txtbPrecio.Name = "txtbPrecio";
             this.txtbPrecio.Size = new System.Drawing.Size(100, 20);
-            this.txtbPrecio.TabIndex = 20;
+            this.txtbPrecio.TabIndex = 6;
             // 
             // frmAgregar
             // 

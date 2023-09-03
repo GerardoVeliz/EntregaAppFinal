@@ -75,5 +75,34 @@ namespace Negocio
 
             
         }
+
+        public void modificarAuto(Auto auto)
+        {
+                accesoDatos datos = new accesoDatos(); 
+            try
+            {
+                datos.SetearQuery("update ARTICULOS set codigo =@codigo, Nombre = @nombre, Descripcion = @descripcion, IdMarca =@idMarca, IdCategoria =@idCategoria , precio = @precio, ImagenUrl = @imagenUrl where Id = @id");
+                datos.setearParametros("@codigo",auto.codigo);
+                datos.setearParametros("@nombre",auto.nombre);
+                datos.setearParametros("@descripcion",auto.descripcion);
+                datos.setearParametros("@idMarca",auto.marca.id);
+                datos.setearParametros("@idCategoria",auto.categoria.id);
+                datos.setearParametros("@precio",auto.precio);
+                datos.setearParametros("@imagenUrl",auto.urlImagen);
+                datos.setearParametros("@id",auto.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion(); 
+            }
+        }
     }
 }

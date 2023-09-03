@@ -20,6 +20,12 @@ namespace Presentacion
         public frmAgregar()
         {
             InitializeComponent();
+        }
+        public frmAgregar(Auto seleccionado)
+        {
+            InitializeComponent();
+            this.auto = seleccionado;
+            Text = "Modificar Auto";
           
         }
 
@@ -50,7 +56,7 @@ namespace Presentacion
             try
             {
                 if (auto == null)
-                {
+                
                 auto = new Auto();
                 auto.categoria =(Categoria) cboxModelo.SelectedItem;
                 auto.marca = (Marca)cboxMarca.SelectedItem;
@@ -59,10 +65,19 @@ namespace Presentacion
                 auto.codigo = txtbCodigo.Text;
                 auto.descripcion = txtbDescripcion.Text;
                 auto.urlImagen = txtbUrl.Text;
+                
+
+                if (auto.Id != 0)
+                {
+                    autoNegocio.modificarAuto(auto);
+                    MessageBox.Show("Modificado con Exito!");
+                } else
+                {
                 autoNegocio.agregarAuto(auto);
+                MessageBox.Show("Agregado Correctamente!");
+
                 }
 
-                MessageBox.Show("Agregado Correctamente!");
 
 
                 this.Close();
@@ -88,8 +103,23 @@ namespace Presentacion
             categoriaNegocio negocioCategoria = new categoriaNegocio();
             try
             {
+                cboxModelo.ValueMember = "id";//---->valor para hacer referencia
+                cboxModelo.DisplayMember = "descripcion"; //lo que muestro
                 cboxModelo.DataSource = negocioCategoria.ListarCategorias();
+                cboxMarca.ValueMember = "id";//---->valor para hacer referencia
+                cboxMarca.DisplayMember = "descripcion"; //lo que muestro
                 cboxMarca.DataSource = negocioMarca.listarMarcas();
+                if (auto != null)
+                {
+                    txtbCodigo.Text = auto.codigo;
+                    txtbDescripcion.Text = auto.descripcion;
+                    txtbNombre.Text = auto.nombre;
+                    txtbPrecio.Text = auto.precio.ToString();
+                    txtbUrl.Text = auto.urlImagen;
+                    cboxMarca.SelectedValue = auto.marca.id;
+                    cboxModelo.SelectedValue = auto.categoria.id;
+
+                }
 
             }
             catch (Exception ex)
