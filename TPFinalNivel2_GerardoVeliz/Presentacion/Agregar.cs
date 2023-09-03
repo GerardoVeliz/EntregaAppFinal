@@ -16,7 +16,7 @@ namespace Presentacion
         
     public partial class frmAgregar : Form
     {
-        private Auto auto; 
+        private Auto auto=null; 
         public frmAgregar()
         {
             InitializeComponent();
@@ -46,8 +46,11 @@ namespace Presentacion
         {
 
             autoNegocio autoNegocio = new autoNegocio();
+
             try
             {
+                if (auto == null)
+                {
                 auto = new Auto();
                 auto.categoria =(Categoria) cboxModelo.SelectedItem;
                 auto.marca = (Marca)cboxMarca.SelectedItem;
@@ -57,6 +60,8 @@ namespace Presentacion
                 auto.descripcion = txtbDescripcion.Text;
                 auto.urlImagen = txtbUrl.Text;
                 autoNegocio.agregarAuto(auto);
+                }
+
                 MessageBox.Show("Agregado Correctamente!");
 
 

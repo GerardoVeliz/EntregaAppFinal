@@ -75,12 +75,13 @@ namespace Presentacion
             // lblBienvenidaCatalogo
             // 
             this.lblBienvenidaCatalogo.AutoSize = true;
-            this.lblBienvenidaCatalogo.Font = new System.Drawing.Font("Tahoma", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidaCatalogo.Location = new System.Drawing.Point(10, 25);
+            this.lblBienvenidaCatalogo.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenidaCatalogo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblBienvenidaCatalogo.Location = new System.Drawing.Point(341, 25);
             this.lblBienvenidaCatalogo.Name = "lblBienvenidaCatalogo";
-            this.lblBienvenidaCatalogo.Size = new System.Drawing.Size(264, 25);
+            this.lblBienvenidaCatalogo.Size = new System.Drawing.Size(302, 30);
             this.lblBienvenidaCatalogo.TabIndex = 1;
-            this.lblBienvenidaCatalogo.Text = "Bienvenid@ al Catalogo!";
+            this.lblBienvenidaCatalogo.Text = "Bienvenid@ al Modulo Stock.";
             // 
             // btnAgregar
             // 
@@ -141,19 +142,20 @@ namespace Presentacion
             // nuevoElementoToolStripMenuItem
             // 
             this.nuevoElementoToolStripMenuItem.Name = "nuevoElementoToolStripMenuItem";
-            this.nuevoElementoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.nuevoElementoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.nuevoElementoToolStripMenuItem.Text = "Nuevo Elemento";
+            this.nuevoElementoToolStripMenuItem.Click += new System.EventHandler(this.nuevoElementoToolStripMenuItem_Click);
             // 
             // modificarElementoToolStripMenuItem
             // 
             this.modificarElementoToolStripMenuItem.Name = "modificarElementoToolStripMenuItem";
-            this.modificarElementoToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.modificarElementoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarElementoToolStripMenuItem.Text = "Modificar Elemento";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             // 
             // toolStripSplitButton2
@@ -182,6 +184,7 @@ namespace Presentacion
             this.btnModificar.TabIndex = 7;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBajaFisica
             // 

@@ -109,5 +109,20 @@ namespace Presentacion
             frmAgregarAuto.ShowDialog();
             cargar();
         }
+
+        private void nuevoElementoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregar frmAgregarAuto = new frmAgregar();
+            frmAgregarAuto.ShowDialog();
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmAgregar frmAgregarAuto = new frmAgregar();
+            frmAgregarAuto.ShowDialog();
+            cargar();
+
+        }
     }
 }
