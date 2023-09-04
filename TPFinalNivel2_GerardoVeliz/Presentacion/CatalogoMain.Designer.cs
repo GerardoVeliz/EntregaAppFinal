@@ -29,18 +29,13 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCatalogoMain));
             this.dgvCatalogo = new System.Windows.Forms.DataGridView();
             this.lblBienvenidaCatalogo = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pboxImagen = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.nuevoElementoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modificarElementoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBajaFisica = new System.Windows.Forms.Button();
@@ -56,49 +51,60 @@ namespace Presentacion
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblArticulo = new System.Windows.Forms.Label();
             this.panelLateral = new System.Windows.Forms.Panel();
+            this.pboxCamaro = new System.Windows.Forms.PictureBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.ttipConsejos = new System.Windows.Forms.ToolTip(this.components);
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.agregarRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSplitButton2 = new System.Windows.Forms.ToolStripSplitButton();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).BeginInit();
-            this.toolStrip1.SuspendLayout();
             this.panelLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxCamaro)).BeginInit();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvCatalogo
             // 
             this.dgvCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatalogo.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvCatalogo.Location = new System.Drawing.Point(146, 167);
+            this.dgvCatalogo.Location = new System.Drawing.Point(218, 164);
             this.dgvCatalogo.MultiSelect = false;
             this.dgvCatalogo.Name = "dgvCatalogo";
             this.dgvCatalogo.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCatalogo.Size = new System.Drawing.Size(732, 382);
-            this.dgvCatalogo.TabIndex = 0;
+            this.dgvCatalogo.Size = new System.Drawing.Size(632, 382);
+            this.dgvCatalogo.TabIndex = 4;
             this.dgvCatalogo.SelectionChanged += new System.EventHandler(this.dgvCatalogo_SelectionChanged);
             // 
             // lblBienvenidaCatalogo
             // 
             this.lblBienvenidaCatalogo.AutoSize = true;
-            this.lblBienvenidaCatalogo.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenidaCatalogo.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblBienvenidaCatalogo.Location = new System.Drawing.Point(494, 31);
+            this.lblBienvenidaCatalogo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenidaCatalogo.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.lblBienvenidaCatalogo.Location = new System.Drawing.Point(596, 28);
             this.lblBienvenidaCatalogo.Name = "lblBienvenidaCatalogo";
-            this.lblBienvenidaCatalogo.Size = new System.Drawing.Size(302, 30);
+            this.lblBienvenidaCatalogo.Size = new System.Drawing.Size(206, 25);
             this.lblBienvenidaCatalogo.TabIndex = 1;
-            this.lblBienvenidaCatalogo.Text = "Bienvenid@ al Modulo Stock.";
+            this.lblBienvenidaCatalogo.Text = "Catalogo de Autos";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(0, 155);
+            this.btnAgregar.Location = new System.Drawing.Point(12, 338);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(137, 23);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
+            this.ttipConsejos.SetToolTip(this.btnAgregar, "Agregar un nuevo registro a la base de datos.");
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // pboxImagen
             // 
             this.pboxImagen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pboxImagen.Location = new System.Drawing.Point(917, 212);
+            this.pboxImagen.Location = new System.Drawing.Point(958, 209);
             this.pboxImagen.Name = "pboxImagen";
             this.pboxImagen.Size = new System.Drawing.Size(377, 337);
             this.pboxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -111,64 +117,11 @@ namespace Presentacion
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(914, 196);
+            this.label2.Location = new System.Drawing.Point(986, 193);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 13);
             this.label2.TabIndex = 4;
             this.label2.Text = "Imagen";
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripSplitButton1,
-            this.toolStripSplitButton2});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1368, 25);
-            this.toolStrip1.TabIndex = 5;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.nuevoElementoToolStripMenuItem,
-            this.modificarElementoToolStripMenuItem,
-            this.salirToolStripMenuItem});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 22);
-            this.toolStripSplitButton1.Text = "Archivo";
-            // 
-            // nuevoElementoToolStripMenuItem
-            // 
-            this.nuevoElementoToolStripMenuItem.Name = "nuevoElementoToolStripMenuItem";
-            this.nuevoElementoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.nuevoElementoToolStripMenuItem.Text = "Nuevo Elemento";
-            this.nuevoElementoToolStripMenuItem.Click += new System.EventHandler(this.nuevoElementoToolStripMenuItem_Click);
-            // 
-            // modificarElementoToolStripMenuItem
-            // 
-            this.modificarElementoToolStripMenuItem.Name = "modificarElementoToolStripMenuItem";
-            this.modificarElementoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.modificarElementoToolStripMenuItem.Text = "Modificar Elemento";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            // 
-            // toolStripSplitButton2
-            // 
-            this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
-            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
-            this.toolStripSplitButton2.Size = new System.Drawing.Size(75, 22);
-            this.toolStripSplitButton2.Text = "Acerca de";
-            this.toolStripSplitButton2.ToolTipText = "Acerca de";
             // 
             // statusStrip1
             // 
@@ -180,21 +133,24 @@ namespace Presentacion
             // 
             // btnModificar
             // 
-            this.btnModificar.Location = new System.Drawing.Point(3, 223);
+            this.btnModificar.Location = new System.Drawing.Point(12, 383);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(134, 23);
-            this.btnModificar.TabIndex = 7;
+            this.btnModificar.TabIndex = 1;
             this.btnModificar.Text = "Modificar";
+            this.ttipConsejos.SetToolTip(this.btnModificar, "Modificar un registro de la base de datos.Primero selecciones el registro en la t" +
+        "abla.");
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnBajaFisica
             // 
-            this.btnBajaFisica.Location = new System.Drawing.Point(3, 283);
+            this.btnBajaFisica.Location = new System.Drawing.Point(9, 432);
             this.btnBajaFisica.Name = "btnBajaFisica";
             this.btnBajaFisica.Size = new System.Drawing.Size(137, 23);
-            this.btnBajaFisica.TabIndex = 8;
+            this.btnBajaFisica.TabIndex = 2;
             this.btnBajaFisica.Text = "Eliminar ";
+            this.ttipConsejos.SetToolTip(this.btnBajaFisica, "Eliminar definitivo de un registro,primero seleccion el registro en la tabla.");
             this.btnBajaFisica.UseVisualStyleBackColor = true;
             this.btnBajaFisica.Click += new System.EventHandler(this.btnBajaFisica_Click);
             // 
@@ -203,7 +159,7 @@ namespace Presentacion
             this.lblFiltroRapido.AutoSize = true;
             this.lblFiltroRapido.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltroRapido.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblFiltroRapido.Location = new System.Drawing.Point(160, 126);
+            this.lblFiltroRapido.Location = new System.Drawing.Point(215, 123);
             this.lblFiltroRapido.Name = "lblFiltroRapido";
             this.lblFiltroRapido.Size = new System.Drawing.Size(54, 13);
             this.lblFiltroRapido.TabIndex = 14;
@@ -214,7 +170,7 @@ namespace Presentacion
             this.lblFiltroEspecifico.AutoSize = true;
             this.lblFiltroEspecifico.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFiltroEspecifico.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblFiltroEspecifico.Location = new System.Drawing.Point(163, 580);
+            this.lblFiltroEspecifico.Location = new System.Drawing.Point(235, 577);
             this.lblFiltroEspecifico.Name = "lblFiltroEspecifico";
             this.lblFiltroEspecifico.Size = new System.Drawing.Size(98, 13);
             this.lblFiltroEspecifico.TabIndex = 15;
@@ -222,23 +178,24 @@ namespace Presentacion
             // 
             // txtbFiltroRapido
             // 
-            this.txtbFiltroRapido.Location = new System.Drawing.Point(212, 123);
+            this.txtbFiltroRapido.Location = new System.Drawing.Point(284, 120);
             this.txtbFiltroRapido.Name = "txtbFiltroRapido";
             this.txtbFiltroRapido.Size = new System.Drawing.Size(434, 20);
-            this.txtbFiltroRapido.TabIndex = 16;
+            this.txtbFiltroRapido.TabIndex = 0;
+            this.ttipConsejos.SetToolTip(this.txtbFiltroRapido, "Escriba algo..");
             this.txtbFiltroRapido.TextChanged += new System.EventHandler(this.txtbFiltroRapido_TextChanged);
             // 
             // txtboxCriterio
             // 
-            this.txtboxCriterio.Location = new System.Drawing.Point(583, 612);
+            this.txtboxCriterio.Location = new System.Drawing.Point(655, 609);
             this.txtboxCriterio.Name = "txtboxCriterio";
             this.txtboxCriterio.Size = new System.Drawing.Size(100, 20);
-            this.txtboxCriterio.TabIndex = 17;
+            this.txtboxCriterio.TabIndex = 3;
             // 
             // lblCampo
             // 
             this.lblCampo.AutoSize = true;
-            this.lblCampo.Location = new System.Drawing.Point(153, 615);
+            this.lblCampo.Location = new System.Drawing.Point(215, 612);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(40, 13);
             this.lblCampo.TabIndex = 18;
@@ -247,7 +204,7 @@ namespace Presentacion
             // lblCriterio1
             // 
             this.lblCriterio1.AutoSize = true;
-            this.lblCriterio1.Location = new System.Drawing.Point(326, 615);
+            this.lblCriterio1.Location = new System.Drawing.Point(398, 612);
             this.lblCriterio1.Name = "lblCriterio1";
             this.lblCriterio1.Size = new System.Drawing.Size(39, 13);
             this.lblCriterio1.TabIndex = 19;
@@ -256,7 +213,7 @@ namespace Presentacion
             // lblCriterio2
             // 
             this.lblCriterio2.AutoSize = true;
-            this.lblCriterio2.Location = new System.Drawing.Point(526, 615);
+            this.lblCriterio2.Location = new System.Drawing.Point(598, 612);
             this.lblCriterio2.Name = "lblCriterio2";
             this.lblCriterio2.Size = new System.Drawing.Size(26, 13);
             this.lblCriterio2.TabIndex = 20;
@@ -266,27 +223,27 @@ namespace Presentacion
             // 
             this.cboxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCampo.FormattingEnabled = true;
-            this.cboxCampo.Location = new System.Drawing.Point(199, 611);
+            this.cboxCampo.Location = new System.Drawing.Point(271, 608);
             this.cboxCampo.Name = "cboxCampo";
             this.cboxCampo.Size = new System.Drawing.Size(121, 21);
-            this.cboxCampo.TabIndex = 21;
+            this.cboxCampo.TabIndex = 1;
             this.cboxCampo.SelectedIndexChanged += new System.EventHandler(this.cboxCampo_SelectedIndexChanged);
             // 
             // cboxCriterio1
             // 
             this.cboxCriterio1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCriterio1.FormattingEnabled = true;
-            this.cboxCriterio1.Location = new System.Drawing.Point(373, 611);
+            this.cboxCriterio1.Location = new System.Drawing.Point(445, 608);
             this.cboxCriterio1.Name = "cboxCriterio1";
             this.cboxCriterio1.Size = new System.Drawing.Size(121, 21);
-            this.cboxCriterio1.TabIndex = 22;
+            this.cboxCriterio1.TabIndex = 2;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(703, 610);
+            this.btnBuscar.Location = new System.Drawing.Point(775, 607);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 23;
+            this.btnBuscar.TabIndex = 4;
             this.btnBuscar.Text = "Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
@@ -296,7 +253,7 @@ namespace Presentacion
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArticulo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblArticulo.Location = new System.Drawing.Point(142, 147);
+            this.lblArticulo.Location = new System.Drawing.Point(215, 148);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(64, 13);
             this.lblArticulo.TabIndex = 24;
@@ -305,15 +262,92 @@ namespace Presentacion
             // panelLateral
             // 
             this.panelLateral.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.panelLateral.Controls.Add(this.pboxCamaro);
+            this.panelLateral.Controls.Add(this.lblNombre);
             this.panelLateral.Controls.Add(this.btnAgregar);
             this.panelLateral.Controls.Add(this.btnModificar);
             this.panelLateral.Controls.Add(this.btnBajaFisica);
-            this.panelLateral.Location = new System.Drawing.Point(0, 31);
+            this.panelLateral.Location = new System.Drawing.Point(0, 28);
             this.panelLateral.Name = "panelLateral";
-            this.panelLateral.Size = new System.Drawing.Size(140, 738);
+            this.panelLateral.Size = new System.Drawing.Size(173, 504);
             this.panelLateral.TabIndex = 25;
             this.panelLateral.DockChanged += new System.EventHandler(this.panel1_DockChanged);
             this.panelLateral.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLateral_Paint);
+            // 
+            // pboxCamaro
+            // 
+            this.pboxCamaro.Location = new System.Drawing.Point(0, 73);
+            this.pboxCamaro.Name = "pboxCamaro";
+            this.pboxCamaro.Size = new System.Drawing.Size(173, 188);
+            this.pboxCamaro.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxCamaro.TabIndex = 12;
+            this.pboxCamaro.TabStop = false;
+            // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Magneto", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblNombre.Location = new System.Drawing.Point(4, 41);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(166, 17);
+            this.lblNombre.TabIndex = 11;
+            this.lblNombre.Text = "Concesionaria \"PEPE\"";
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSplitButton1,
+            this.toolStripSplitButton2});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(1368, 25);
+            this.toolStrip1.TabIndex = 26;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.agregarRegistroToolStripMenuItem,
+            this.salirToolStripMenuItem});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(64, 22);
+            this.toolStripSplitButton1.Text = "Archivo";
+            // 
+            // agregarRegistroToolStripMenuItem
+            // 
+            this.agregarRegistroToolStripMenuItem.Name = "agregarRegistroToolStripMenuItem";
+            this.agregarRegistroToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.agregarRegistroToolStripMenuItem.Text = "Agregar Registro";
+            this.agregarRegistroToolStripMenuItem.Click += new System.EventHandler(this.agregarRegistroToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
+            // toolStripSplitButton2
+            // 
+            this.toolStripSplitButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripSplitButton2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.acercaDeToolStripMenuItem});
+            this.toolStripSplitButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton2.Image")));
+            this.toolStripSplitButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton2.Name = "toolStripSplitButton2";
+            this.toolStripSplitButton2.Size = new System.Drawing.Size(75, 22);
+            this.toolStripSplitButton2.Text = "Acerca de";
+            // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.acercaDeToolStripMenuItem.Text = "Desarrolador";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
             // frmCatalogoMain
             // 
@@ -321,6 +355,7 @@ namespace Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1368, 781);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.panelLateral);
             this.Controls.Add(this.lblArticulo);
             this.Controls.Add(this.btnBuscar);
@@ -334,11 +369,12 @@ namespace Presentacion
             this.Controls.Add(this.lblFiltroEspecifico);
             this.Controls.Add(this.lblFiltroRapido);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pboxImagen);
             this.Controls.Add(this.lblBienvenidaCatalogo);
             this.Controls.Add(this.dgvCatalogo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmCatalogoMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modulo Stock";
@@ -346,9 +382,11 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.frmCatalogoMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxImagen)).EndInit();
+            this.panelLateral.ResumeLayout(false);
+            this.panelLateral.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxCamaro)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.panelLateral.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,7 +399,6 @@ namespace Presentacion
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.PictureBox pboxImagen;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBajaFisica;
@@ -375,12 +412,16 @@ namespace Presentacion
         private System.Windows.Forms.ComboBox cboxCampo;
         private System.Windows.Forms.ComboBox cboxCriterio1;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
-        private System.Windows.Forms.ToolStripMenuItem nuevoElementoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modificarElementoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
-        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton2;
         private System.Windows.Forms.Label lblArticulo;
         private System.Windows.Forms.Panel panelLateral;
+        private System.Windows.Forms.PictureBox pboxCamaro;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.ToolTip ttipConsejos;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
+        private System.Windows.Forms.ToolStripMenuItem agregarRegistroToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton2;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }

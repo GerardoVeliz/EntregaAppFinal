@@ -71,6 +71,8 @@ namespace Presentacion
             {
 
             cargar();
+                pboxCamaro.Load("https://th.bing.com/th/id/OIP.xzshklgCCXHbLtqis8qHmAHaE8?pid=ImgDet&rs=1");
+                
                 cboxCampo.Items.Add("...");
                 cboxCampo.Items.Add("Nombre");
                 cboxCampo.Items.Add("Codigo");
@@ -299,5 +301,35 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString()); 
             }
         }
+
+        private void eliminarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSplitButton2_ButtonClick(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desarrollado por : Gerardo Veliz | Linkedin:www.linkedin.com/in/gerardo-velizz |Github:github.com/GerardoVeliz ");
+        }
+
+        private void agregarRegistroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregar frmAgregarAuto = new frmAgregar();
+            frmAgregarAuto.ShowDialog();
+            cargar();
+        }
+
+        private void acercaDeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desarrollado por : Gerardo Veliz | Linkedin:www.linkedin.com/in/gerardo-velizz |Github:github.com/GerardoVeliz ");
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+     
+        
     }
 }

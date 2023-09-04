@@ -134,6 +134,13 @@ namespace Presentacion
             this.Close();
         }
 
-       
+        private void txtbPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                // Si no es un número ni una tecla de control, cancela la entrada
+                e.Handled = true;
+            }
+        }
     }
 }

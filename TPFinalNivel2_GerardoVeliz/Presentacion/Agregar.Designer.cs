@@ -29,6 +29,7 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.cboxMarca = new System.Windows.Forms.ComboBox();
             this.lblCodigo = new System.Windows.Forms.Label();
@@ -37,7 +38,7 @@ namespace Presentacion
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
-            this.lblModelo = new System.Windows.Forms.Label();
+            this.lblTipo = new System.Windows.Forms.Label();
             this.cboxModelo = new System.Windows.Forms.ComboBox();
             this.txtbDescripcion = new System.Windows.Forms.TextBox();
             this.txtbNombre = new System.Windows.Forms.TextBox();
@@ -48,6 +49,7 @@ namespace Presentacion
             this.lblUrl = new System.Windows.Forms.Label();
             this.txtbUrl = new System.Windows.Forms.TextBox();
             this.txtbPrecio = new System.Windows.Forms.TextBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pboxUrl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,6 +71,7 @@ namespace Presentacion
             this.cboxMarca.Name = "cboxMarca";
             this.cboxMarca.Size = new System.Drawing.Size(121, 21);
             this.cboxMarca.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.cboxMarca, "Elija la marca.");
             // 
             // lblCodigo
             // 
@@ -94,6 +97,7 @@ namespace Presentacion
             this.txtbCodigo.Name = "txtbCodigo";
             this.txtbCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtbCodigo.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.txtbCodigo, "Ingrese el codigo.");
             // 
             // lblNombre
             // 
@@ -122,14 +126,14 @@ namespace Presentacion
             this.lblMarca.TabIndex = 8;
             this.lblMarca.Text = "Marca";
             // 
-            // lblModelo
+            // lblTipo
             // 
-            this.lblModelo.AutoSize = true;
-            this.lblModelo.Location = new System.Drawing.Point(37, 242);
-            this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(42, 13);
-            this.lblModelo.TabIndex = 9;
-            this.lblModelo.Text = "Modelo";
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(37, 242);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(28, 13);
+            this.lblTipo.TabIndex = 9;
+            this.lblTipo.Text = "Tipo";
             // 
             // cboxModelo
             // 
@@ -139,6 +143,7 @@ namespace Presentacion
             this.cboxModelo.Name = "cboxModelo";
             this.cboxModelo.Size = new System.Drawing.Size(121, 21);
             this.cboxModelo.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.cboxModelo, "Elija el tipo.");
             // 
             // txtbDescripcion
             // 
@@ -146,6 +151,7 @@ namespace Presentacion
             this.txtbDescripcion.Name = "txtbDescripcion";
             this.txtbDescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtbDescripcion.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.txtbDescripcion, "Ingrese una breve descripcion.");
             // 
             // txtbNombre
             // 
@@ -153,6 +159,7 @@ namespace Presentacion
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Size = new System.Drawing.Size(100, 20);
             this.txtbNombre.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.txtbNombre, "Ingrese el nombre del modelo.");
             // 
             // lblTitulo
             // 
@@ -210,6 +217,7 @@ namespace Presentacion
             this.txtbUrl.Name = "txtbUrl";
             this.txtbUrl.Size = new System.Drawing.Size(100, 20);
             this.txtbUrl.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.txtbUrl, "Agregue una url de una imagen del automovil.");
             this.txtbUrl.TextChanged += new System.EventHandler(this.txtbUrl_TextChanged);
             // 
             // txtbPrecio
@@ -218,6 +226,8 @@ namespace Presentacion
             this.txtbPrecio.Name = "txtbPrecio";
             this.txtbPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtbPrecio.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.txtbPrecio, "Ingrese el precio.");
+            this.txtbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtbPrecio_KeyPress);
             // 
             // frmAgregar
             // 
@@ -234,7 +244,7 @@ namespace Presentacion
             this.Controls.Add(this.txtbNombre);
             this.Controls.Add(this.txtbDescripcion);
             this.Controls.Add(this.cboxModelo);
-            this.Controls.Add(this.lblModelo);
+            this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
@@ -243,6 +253,7 @@ namespace Presentacion
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.cboxMarca);
             this.Controls.Add(this.btnAceptar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmAgregar";
             this.Text = "Agregar Nuevo";
             this.Load += new System.EventHandler(this.frmAgregar_Load);
@@ -262,7 +273,7 @@ namespace Presentacion
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.Label lblModelo;
+        private System.Windows.Forms.Label lblTipo;
         private System.Windows.Forms.ComboBox cboxModelo;
         private System.Windows.Forms.TextBox txtbDescripcion;
         private System.Windows.Forms.TextBox txtbNombre;
@@ -273,5 +284,6 @@ namespace Presentacion
         private System.Windows.Forms.Label lblUrl;
         private System.Windows.Forms.TextBox txtbUrl;
         private System.Windows.Forms.TextBox txtbPrecio;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
