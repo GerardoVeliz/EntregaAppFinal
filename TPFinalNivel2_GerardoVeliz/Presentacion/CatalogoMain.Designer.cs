@@ -264,14 +264,17 @@ namespace Presentacion
             // 
             // cboxCampo
             // 
+            this.cboxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCampo.FormattingEnabled = true;
             this.cboxCampo.Location = new System.Drawing.Point(199, 611);
             this.cboxCampo.Name = "cboxCampo";
             this.cboxCampo.Size = new System.Drawing.Size(121, 21);
             this.cboxCampo.TabIndex = 21;
+            this.cboxCampo.SelectedIndexChanged += new System.EventHandler(this.cboxCampo_SelectedIndexChanged);
             // 
             // cboxCriterio1
             // 
+            this.cboxCriterio1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxCriterio1.FormattingEnabled = true;
             this.cboxCriterio1.Location = new System.Drawing.Point(373, 611);
             this.cboxCriterio1.Name = "cboxCriterio1";
@@ -286,6 +289,7 @@ namespace Presentacion
             this.btnBuscar.TabIndex = 23;
             this.btnBuscar.Text = "Filtrar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // lblArticulo
             // 

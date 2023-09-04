@@ -71,7 +71,12 @@ namespace Presentacion
             {
 
             cargar();
-            
+                cboxCampo.Items.Add("...");
+                cboxCampo.Items.Add("Nombre");
+                cboxCampo.Items.Add("Codigo");
+                cboxCampo.Items.Add("Descripcion");
+                cboxCampo.Items.Add("Precio");
+
             }
             catch (Exception ex)
             {
@@ -192,6 +197,101 @@ namespace Presentacion
                 dgvCatalogo.DataSource = listaFiltrada;
                 ocultarColumnas(); 
 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString()); 
+            }
+        }
+
+        private void cboxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            autoNegocio negocioAuto = new autoNegocio();
+            cboxCriterio1.Items.Clear();
+            string campoSeleccionado;
+            try
+            {
+                campoSeleccionado = cboxCampo.SelectedItem.ToString();
+                if (campoSeleccionado == "Precio")
+                {
+                    cboxCriterio1.Items.Add("Mayor a");
+                    cboxCriterio1.Items.Add("Menor a");
+                    cboxCriterio1.Items.Add("Igual a");
+
+                } 
+                else if (campoSeleccionado== "...")
+                {
+                    cboxCriterio1.Items.Clear();
+                    dgvCatalogo.DataSource = negocioAuto.listarAutos();
+                }
+                else 
+                {
+                    cboxCriterio1.Items.Add("Comienza con");
+                    cboxCriterio1.Items.Add("Termina con");
+                    cboxCriterio1.Items.Add("Contiene ");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString()); 
+            }
+        }
+        private bool SoloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+
+                    return false;
+            }
+            return true;
+        }
+        public bool validaciones()
+        {
+            if (cboxCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por Favor elija un valor en el desplegable Campo, primero..");
+                return false;
+            }
+            if (cboxCriterio1.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por Favor elija un valor en el desplegable criterio, primero..");
+                return false;
+            }
+            if (cboxCampo.SelectedItem.ToString() == "Numero")
+            {
+
+                if (string.IsNullOrEmpty(txtboxCriterio.Text))
+                {
+                    MessageBox.Show("Por favor complete este el campo Filtro, primero... ");
+                    return false;
+                }
+
+
+                if (!(SoloNumeros(txtboxCriterio.Text)))
+                {
+                    MessageBox.Show("Este Campo solo tiene que tener numeros..");
+                    return false;
+                }
+
+            }
+            return true;
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            autoNegocio negocioAuto= new autoNegocio(); 
+            try
+            {
+                if (!(validaciones()))
+                    return;
+
+                string campo = cboxCampo.SelectedItem.ToString();
+                string criterio = cboxCriterio1.SelectedItem.ToString();
+                string filtro = txtboxCriterio.Text;
+                dgvCatalogo.DataSource = negocioAuto.filtrar(campo, criterio, filtro);
             }
             catch (Exception ex)
             {

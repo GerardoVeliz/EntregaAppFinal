@@ -124,5 +124,108 @@ namespace Negocio
                 datos.CerrarConexion(); 
             }
         }
+
+        public List<Auto> filtrar(string campo, string criterio, string filtro)
+        {
+            accesoDatos accesoDatos = new accesoDatos();
+            List<Auto> autos = new List<Auto>();
+            string consulta = "select a.Id,a.Codigo,a.Nombre,a.Descripcion,a.ImagenUrl UrlImagen,c.Descripcion Tipo,m.Descripcion Marca,a.Precio,a.IdCategoria,a.IdMarca from ARTICULOS a ,CATEGORIAS c, MARCAS m where c.Id=a.IdCategoria and m.Id=a.IdMarca and ";
+            try
+            {
+                if (campo == "Precio")
+                {
+                    switch (criterio)
+                    {
+                        case "Mayor a":
+                            consulta += "Precio >" + filtro; 
+                            break;
+                        case "Menor a":
+                            consulta += "Precio <" + filtro;
+                            break;
+                        case "Igual a":
+                            consulta += "Precio =" + filtro;
+                            break; 
+                    }
+
+                } else if (campo == "Nombre")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "a.Nombre like '" + filtro + "%'";
+                            break;
+                        case "Termina con":
+                            consulta += "a.Nombre like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "a.Nombre like '%" + filtro + "%'";
+                            break;
+
+                    }
+                }
+                else if (campo == "Descripcion")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "a.Descripcion like '" + filtro + "%'";
+                            break;
+                        case "Termina con":
+                            consulta += "a.Descripcion like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "a.Descripcion like '%" + filtro + "%'";
+                            break;
+
+                    }
+                }
+                else if (campo == "Codigo")
+                {
+                    switch (criterio)
+                    {
+                        case "Comienza con":
+                            consulta += "a.Codigo like '" + filtro + "%'";
+                            break;
+                        case "Termina con":
+                            consulta += "a.Codigo like '%" + filtro + "'";
+                            break;
+                        default:
+                            consulta += "a.Codigo like '%" + filtro + "%'";
+                            break;
+
+                    }
+                }
+                accesoDatos.SetearQuery(consulta);
+                accesoDatos.ejecutarLectura();
+                while (accesoDatos.lector.Read())
+                {
+                    Auto aux = new Auto();
+                    aux.Id = (int)accesoDatos.lector["Id"];
+                    aux.codigo = (string)accesoDatos.lector["Codigo"];
+                    aux.nombre = (string)accesoDatos.lector["Nombre"];
+                    aux.descripcion = (string)accesoDatos.lector["Descripcion"];
+                    aux.precio = (decimal)accesoDatos.lector["Precio"];
+                    if (!(accesoDatos.lector["UrlImagen"] is DBNull))
+                        aux.urlImagen = (string)accesoDatos.lector["UrlImagen"];
+                    aux.marca = new Marca();
+                    aux.marca.id = (int)accesoDatos.lector["IdMarca"];
+                    aux.marca.descripcion = (string)accesoDatos.lector["Marca"];
+                    aux.categoria = new Categoria();
+                    aux.categoria.id = (int)accesoDatos.lector["IdCategoria"];
+                    aux.categoria.descripcion = (string)accesoDatos.lector["Tipo"];
+
+                    autos.Add(aux);
+
+                }
+
+                return autos; 
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }
